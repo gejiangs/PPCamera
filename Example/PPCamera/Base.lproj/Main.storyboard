@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PPCamera_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COX-9o-UJn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pf0-JD-6KX">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6k7-J6-75i">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRm-cV-3Xn">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="60"/>
+                                                <state key="normal" title="闪光灯(关)"/>
+                                                <connections>
+                                                    <action selector="flashButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FR0-Dv-mWT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdx-2S-wY4">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="60"/>
+                                                <state key="normal" title="拍照"/>
+                                                <connections>
+                                                    <action selector="takePhotoButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LKR-oh-a3u"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TJ-hx-O5F">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="60"/>
+                                                <state key="normal" title="后置"/>
+                                                <connections>
+                                                    <action selector="changeCameraButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FFb-bE-rkp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="891-Og-0ZN"/>
+                                    <constraint firstItem="6k7-J6-75i" firstAttribute="leading" secondItem="pf0-JD-6KX" secondAttribute="leading" id="8mm-em-drV"/>
+                                    <constraint firstItem="6k7-J6-75i" firstAttribute="top" secondItem="pf0-JD-6KX" secondAttribute="top" id="Nmq-qn-57i"/>
+                                    <constraint firstAttribute="trailing" secondItem="6k7-J6-75i" secondAttribute="trailing" id="d46-n0-Gr4"/>
+                                    <constraint firstAttribute="bottom" secondItem="6k7-J6-75i" secondAttribute="bottom" id="fYe-Im-8hf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="COX-9o-UJn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="K3T-66-acs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="pf0-JD-6KX" secondAttribute="bottom" id="KD7-yF-mGY"/>
+                            <constraint firstItem="pf0-JD-6KX" firstAttribute="top" secondItem="COX-9o-UJn" secondAttribute="bottom" id="TV6-P7-Hbh"/>
+                            <constraint firstAttribute="trailing" secondItem="pf0-JD-6KX" secondAttribute="trailing" id="Trh-Zf-n37"/>
+                            <constraint firstItem="pf0-JD-6KX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="dkf-zN-Igv"/>
+                            <constraint firstItem="COX-9o-UJn" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="l0a-7L-YJk"/>
+                            <constraint firstAttribute="trailing" secondItem="COX-9o-UJn" secondAttribute="trailing" id="vLd-wO-ZLN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="COX-9o-UJn" id="GPn-gZ-chZ"/>
+                        <outlet property="flashButton" destination="TRm-cV-3Xn" id="RMV-xa-okn"/>
+                        <outlet property="modelButton" destination="0TJ-hx-O5F" id="FI4-Zn-OJ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133"/>
+        </scene>
+    </scenes>
+</document>
