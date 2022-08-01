@@ -44,7 +44,7 @@ public struct CameraControllerConfigurations {
 public class CameraController: UIViewController, BufferSizeProvider {
     
     /// Which camera to use, front or rear
-    @objc public private(set) var cameraPosition = CameraPosition.rear
+    @objc public private(set) var cameraPosition = CameraPosition.front
     
     /// Mode of flashlight
     @objc public private(set) var flashMode = AVCaptureDevice.FlashMode.off
