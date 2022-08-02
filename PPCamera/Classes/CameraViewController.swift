@@ -445,13 +445,14 @@ extension CameraController {
             frontCameraInput = try? AVCaptureDeviceInput(device: frontCamera)
         }
         
-        if let input = rearCameraInput {
-            if captureSession.canAddInput(input) { captureSession.addInput(input) }
-            cameraPosition = .rear
-        } else if let input = frontCameraInput {
+        //默认先启用前摄像头
+        if let input = frontCameraInput {
             if captureSession.canAddInput(input) { captureSession.addInput(input) }
             else { throw CameraControllerError.inputsAreInvalid }
             cameraPosition = .front
+        } else if let input = rearCameraInput {
+            if captureSession.canAddInput(input) { captureSession.addInput(input) }
+            cameraPosition = .rear
         } else { throw CameraControllerError.noCamerasAvailable }
     }
     

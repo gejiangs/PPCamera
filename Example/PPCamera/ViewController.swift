@@ -45,6 +45,7 @@ class ViewController: UIViewController {
             vc.view.addGestureRecognizer(tap)
             self.present(vc, animated: true, completion: nil)
         }
+        
     }
     
     @objc func cancel() {
