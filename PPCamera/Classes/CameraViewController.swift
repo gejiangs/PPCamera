@@ -396,6 +396,7 @@ extension CameraController {
                 try self.configureCaptureDevices()
                 try self.configureDeviceInputs()
                 try self.configurePhotoOutput()
+                self.setVideoMirror()
                 DispatchQueue.main.async { completionHandler(nil) }
             } catch {
                 DispatchQueue.main.async { completionHandler(error) }
